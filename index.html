@@ -14,19 +14,35 @@
         <!-- navigation -->
     <nav class="row h-100 align-items-center">
             <!-- logo -->
-            <div class="col-1">
-                <img id="logo-small" src="./assets/img/mobile-logo.png" alt="">
+            <div class="col-2">
+                <img id="logo-small" src="./assets/img/mobile-logo.png" alt="" class="d-md-none">
+                <img src="./assets/img/logo.svg" alt="" class="img-fluid d-none d-md-block">
             </div>
             <!-- search -->
-            <div class="col-8 offset-1 d-flex align-items-center">
+            <div class="col-8 d-flex align-items-center">
                 <div class="input-group">
-                    <span class="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    <span class="input-group-text border-0" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" class="form-control bg-custom-gray border-0" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
             <!-- bell -->
-            <div class=" col-1 offset-1">
-                <i class="fa-solid fa-bell text-warning"></i>
+            <div class=" col-2 justify-content-between align-items-center d-flex ">
+                <i class="fa-solid fa-bars d-none d-md-inline"></i>
+                <i class="fa-solid fa-circle-info d-none d-md-inline"></i>
+                <i class="fa-solid fa-ellipsis-vertical d-none d-md-inline"></i>
+                <span class="dropdown">
+                    <!-- dropdown button -->
+                    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-bell text-warning"></i>
+                    </button>
+                    <!-- dropdown items -->
+                    <ul class="dropdown-menu">
+                      <li><button class="dropdown-item" type="button">Action</button></li>
+                      <li><button class="dropdown-item" type="button">Another action</button></li>
+                      <li><button class="dropdown-item" type="button">Something else here</button></li>
+                    </ul>
+                </span>
+                
             </div>
         </nav>
     </header>
@@ -59,9 +75,21 @@
             <section class="overflow-auto h-100 px-0 col-11">
                 <div class="container-fluid">
                     <!-- user counter -->
-                    <div class="row bg-primary py-3">
+                    <div class="row bg-primary text-white py-3">
                         <div class="col-12">
-                            <h4>Boolean</h4>
+                            <h2 class="d-inline">Boolean</h2>
+                            <span class="badge rounded-pill text-bg-primary bg-custom-pill my-1" role="button">Piano blaze</span>
+                            <div class="my-1">
+                                <span class="badge rounded-pill text-bg-primary bg-custom-pill" role="button">3 app</span>
+                                <span>>></span>
+                                <span class="badge rounded-pill text-bg-primary bg-custom-pill" role="button">+</span>
+                                <span class="d-none py-1">
+                                    <span class="badge rounded-pill text-bg-primary bg-custom-pill" role="button">Boolean mobile app</span>
+                                    <span class="badge rounded-pill text-bg-primary bg-custom-pill" role="button">Boolean web app</span>
+                                    <span class="badge rounded-pill text-bg-primary bg-custom-pill" role="button">Boolean blog app</span>
+
+                                </span>
+                            </div>
                         </div>
                         <div class="col-12">
                             Studenti online negli ultimi 30 minuti
@@ -69,15 +97,81 @@
                         </div>
                     </div>
                     <!-- content -->
-                    <section class="row">
+                    <section class="row justify-content-center">
                         <!-- classes + faq -->
-                        <div class="row mx-1 col-12">
+                        <div class="row col-12">
                             <!-- class card -->
                             <section class="container-fluid py-3 col-12">
                                 <div class="row">
                                     <div class="col-12 card bg-transparent text-bg-light mb-3 px-0">
-                                        <div class="card-header">
-                                            Prossime classi
+                                        <div class="card-header row mx-0">
+                                            <h1 class="col-11">Prossime classi</h1>
+                                            <!-- offcanvas -->
+                                            <button class="btn btn-outline-primary col-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
+                                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                               <!-- offcanvas button -->
+                                                <div class="offcanvas-header">
+                                                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Form</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                </div>
+                                                <div class="offcanvas-body">
+                                                    <div class="input-group mb-3">
+                                                        <form class="row g-3">
+                                                            <!-- email -->
+                                                            <div class="col-md-6">
+                                                              <label for="inputEmail4" class="form-label">Email</label>
+                                                              <input type="email" class="form-control" id="inputEmail4">
+                                                            </div>
+                                                            <!-- password -->
+                                                            <div class="col-md-6">
+                                                              <label for="inputPassword4" class="form-label">Password</label>
+                                                              <input type="password" class="form-control" id="inputPassword4">
+                                                            </div>
+                                                            <!-- address -->
+                                                            <div class="col-12">
+                                                              <label for="inputAddress" class="form-label">Indirizzo</label>
+                                                              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                                            </div>
+                                                            <!-- citta -->
+                                                            <div class="col-md-6">
+                                                              <label for="inputCity" class="form-label">Cittá</label>
+                                                              <input type="text" class="form-control" id="inputCity">
+                                                            </div>
+                                                            <!-- stato -->
+                                                            <div class="col-md-4">
+                                                              <label for="inputState" class="form-label">Stato</label>
+                                                              <select id="inputState" class="form-select">
+                                                                <option selected>Choose...</option>
+                                                                <option>...</option>
+                                                              </select>
+                                                            </div>
+                                                            <!-- CAP -->
+                                                            <div class="col-md-2">
+                                                              <label for="inputZip" class="form-label">CAP</label>
+                                                              <input type="text" class="form-control" id="inputZip">
+                                                            </div>
+                                                            <!-- foto -->
+                                                            <div class="input-group mb-3">
+                                                                <input type="file" class="form-control" id="inputGroupFile02">
+                                                            </div>
+                                                            <!-- check -->
+                                                            <div class="col-12">
+                                                              <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                                <label class="form-check-label" for="gridCheck">
+                                                                  Seleziona per proseguire
+                                                                </label>
+                                                              </div>
+                                                            </div>
+                                                            <div class="col-12">
+                                                              <button type="submit" class="btn btn-primary">Salva</button>
+                                                              <button type="submit" class="btn btn-warning">Svuota</button>
+
+                                                            </div>
+                                                        </form>                                                    
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="card-body">
                                             <!-- header list -->
@@ -109,7 +203,7 @@
                                                 <!-- classe -->
                                                 <div class="row align-items-center col-6">
                                                     <div class="col-4">
-                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid">
+                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid mh-50">
                                                     </div>
                                                     <div class="col-8">
                                                         Classe 75
@@ -142,7 +236,7 @@
                                                 <!-- classe -->
                                                 <div class="row align-items-center col-6">
                                                     <div class="col-4">
-                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid">
+                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid mh-50">
                                                     </div>
                                                     <div class="col-8">
                                                         Classe 76
@@ -175,7 +269,7 @@
                                                 <!-- classe -->
                                                 <div class="row align-items-center col-6">
                                                     <div class="col-4">
-                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid">
+                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid mh-50">
                                                     </div>
                                                     <div class="col-8">
                                                         Classe 77
@@ -208,7 +302,7 @@
                                                 <!-- classe -->
                                                 <div class="row align-items-center col-6">
                                                     <div class="col-4">
-                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid">
+                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid mh-50">
                                                     </div>
                                                     <div class="col-8">
                                                         Classe 78
@@ -241,7 +335,7 @@
                                                 <!-- classe -->
                                                 <div class="row align-items-center col-6">
                                                     <div class="col-4">
-                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid">
+                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid mh-50">
                                                     </div>
                                                     <div class="col-8">
                                                         Classe 79
@@ -274,7 +368,7 @@
                                                 <!-- classe -->
                                                 <div class="row align-items-center col-6">
                                                     <div class="col-4">
-                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid">
+                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid mh-50">
                                                     </div>
                                                     <div class="col-8">
                                                         Classe 80
@@ -307,7 +401,7 @@
                                                 <!-- classe -->
                                                 <div class="row align-items-center col-6">
                                                     <div class="col-4">
-                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid">
+                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid mh-50">
                                                     </div>
                                                     <div class="col-8">
                                                         Classe 81
@@ -340,7 +434,7 @@
                                                 <!-- classe -->
                                                 <div class="row align-items-center col-6">
                                                     <div class="col-4">
-                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid">
+                                                        <img src="./assets/img/class-avatar.jpg" alt="" class="img-fluid mh-50">
                                                     </div>
                                                     <div class="col-8">
                                                         Classe 82
@@ -423,7 +517,7 @@
                             </section>
                         </div>
                         <!-- Todo + graph -->
-                        <div class="row mx-1 col-12">
+                        <div class="row col-12">
                             <!-- todo -->
                             <div class="card bg-transparent text-bg-light px-0 mb-3 col-12 ">
                                 <div class="card-header"><h1>Todo</h1></div>
@@ -466,7 +560,7 @@
                                     <div class="border-bottom px-2 py-2">
                                         Marzo: 1500
                                     </div>
-                                    <div class="px-2 py-3">
+                                    <div class="px-2 py-2">
                                         <a href="#" class="link-primary">Visualizza report approfondito</a>
                                     </div>
                                 </div>
