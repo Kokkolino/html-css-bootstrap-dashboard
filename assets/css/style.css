@@ -14,9 +14,15 @@ main{
     background-image: url(../img/sidebar-bg.png);
 }
 
-
+td img{
+    height: 25px;
+}
 
 /* utilities */
 .bg-blue{
     background-color: blue;
+}
+
+.edit{
+    flex-basis: 40%;
 }
