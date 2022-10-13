@@ -12,30 +12,51 @@
 <body>
     <header class="container-fluid">
         <!-- navigation -->
-      <nav class="row">
-        <!-- logo -->
-        <div class="col-2">
-            <img id="logo-small" src="./assets/img/mobile-logo.png" alt="">
-        </div>
-        <!-- search -->
-        <div id="search" class="row col-6 offset-1">
-            <i class="fa-solid fa-magnifying-glass col-1"></i>
-        </div>
-        <!-- bell -->
-        <div class="col-2 offset-1">
-            <i class="fa-solid fa-bell"></i>
-        </div>
-      </nav>
+      <nav class="row h-100 align-items-center">
+            <!-- logo -->
+            <div class="col-1">
+                <img id="logo-small" src="./assets/img/mobile-logo.png" alt="">
+            </div>
+            <!-- search -->
+            <div class="col-8 offset-1 d-flex align-items-center">
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <!-- bell -->
+            <div class=" col-1 offset-1">
+                <i class="fa-solid fa-bell text-warning"></i>
+            </div>
+        </nav>
     </header>
 
     <main class="container-fluid">
-        <div class="row h-100">
+        <div class="row h-100 align-items-space">
             <!-- sidebar -->
-            <div id="sidebar" class="px-0 bg-dark col-2">
-
+            <div id="sidebar" class="d-flex flex-column justify-content-between px-0 py-3 bg-dark col-1">
+                <div class="row text-white">
+                    <!-- home -->
+                    <div class="d-flex col-12 justify-content-center py-2">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <!-- chart -->
+                    <div class="d-flex col-12 justify-content-center py-2">
+                        <i class="fa-solid fa-chart-simple"></i>
+                    </div>
+                    <!-- connection -->
+                    <div class="d-flex col-12 justify-content-center py-2">
+                        <i class="fa-solid fa-signal"></i>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="col-1 text-white">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                </div>
             </div>
             <!-- main -->
-            <div class="px-0 col-10">
+            <div class="px-0 col-11">
                 <!-- user conter -->
                 <div class="container-fluid">
                     <div class="row bg-primary py-3">
@@ -50,18 +71,18 @@
                     <!-- content -->
                     <div class="container-fluid py-3">
                         <div class="row">
-                            <div class="col-12 card text-bg-light mb-3">
+                            <div class="col-12 card text-bg-light mb-3 px-0">
                                 <div class="card-header">Header</div>
                                 <div class="card-body">
                                   <h5 class="card-title">Light card title</h5>
                                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
