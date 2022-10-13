@@ -40,6 +40,9 @@ td img{
     font-size: 1em;
 }
 
+#sidebar *{
+    font-size: 1.2rem;
+}
 
 /* media query */
 .offcanvas.offcanvas-end {

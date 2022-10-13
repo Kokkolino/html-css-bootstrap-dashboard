@@ -50,29 +50,42 @@
     <main class="container-fluid height-wa">
         <div class="row h-100 align-items-space">
             <!-- sidebar -->
-            <section id="sidebar" class="h-100 d-flex flex-column justify-content-between px-0 py-3 bg-dark col-1">
+            <section id="sidebar" class="h-100 d-flex flex-column justify-content-between px-0 py-3 bg-dark col-1 col-lg-2">
                 <div class="row text-white">
                     <!-- home -->
                     <div class="d-flex col-12 justify-content-center py-2">
                         <i class="fa-solid fa-house"></i>
+                        <span class="d-none d-lg-inline px-3">Home</span>
                     </div>
                     <!-- chart -->
                     <div class="d-flex col-12 justify-content-center py-2">
                         <i class="fa-solid fa-chart-simple"></i>
+                        <span class="d-none d-lg-inline px-3">
+                            Stats
+                        </span>
                     </div>
                     <!-- connection -->
                     <div class="d-flex col-12 justify-content-center py-2">
                         <i class="fa-solid fa-signal"></i>
+                        <span class="d-none d-lg-inline px-3">
+                            Signals
+                        </span>
+
                     </div>
                 </div>
+                <!-- settings -->
                 <div class="d-flex justify-content-center">
-                    <div class="col-1 text-white">
+                    <div class="col-8 offset-2 text-white justify-content-center">
                         <i class="fa-solid fa-gear"></i>
+                        <span class="d-none d-lg-inline px-3">
+                            Admin
+                        </span>
+
                     </div>
                 </div>
             </section>
             <!-- main -->
-            <section class="overflow-auto h-100 px-0 col-11">
+            <section class="overflow-auto h-100 px-0 col-11 col-lg-10">
                 <div class="container-fluid">
                     <!-- user counter -->
                     <div class="row bg-primary text-white py-3">
